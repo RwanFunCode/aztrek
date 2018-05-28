@@ -1,0 +1,13 @@
+@import './partials/variables';
+
+@import './partials/mixins';
+
+@import './partials/bases';
+
+@media only screen and (min-width: $breakpoint-tablet) {
+  @import "./partials/tablet";
+}
+
+@media only screen and (min-width: $breakpoint-desktop) {
+  @import "./partials/desktops";
+}

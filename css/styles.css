@@ -1,0 +1,523 @@
+html {
+  font-size: 75%; }
+
+* {
+  box-sizing: border-box; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+p {
+  font-family: "Futura", "Arial", sans-serif;
+  text-transform: uppercase; }
+
+ul {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.header_absolute {
+  display: flex;
+  flex-direction: column;
+  background: url("../images/photo/background_header.jpg") no-repeat center bottom;
+  background-size: cover;
+  min-height: 200px; }
+
+.logo img {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px; }
+
+.nav_bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(228, 126, 61, 0.95);
+  border-radius: 20px 20px 0 0;
+  padding: 5px 20px; }
+  .nav_bottom ul {
+    display: flex;
+    justify-content: space-between; }
+  .nav_bottom li img {
+    height: 30px;
+    width: 30px; }
+
+.nav_top ul li {
+  font-size: 0; }
+
+.log img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-top: 5px; }
+
+.header_top {
+  display: flex;
+  justify-content: space-around; }
+  .header_top h2 {
+    font-size: 1rem;
+    font-family: "Righteous", "Arial", sans-serif;
+    letter-spacing: 0.1rem;
+    color: #e47e3d;
+    margin-top: 50px;
+    font-weight: bold; }
+
+.formulaire {
+  display: flex;
+  margin: auto auto -15px;
+  border: 1px solid #b24c5a;
+  border-radius: 10px 0 0 10px; }
+  .formulaire .champ {
+    width: 180px;
+    height: 30px;
+    font-size: 0.875rem;
+    font-family: "Futura", "Arial", sans-serif;
+    text-transform: uppercase;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+    color: #817D7D;
+    border: none;
+    padding-left: 10px; }
+  .formulaire .search_btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-left: 1px solid #b24c5a;
+    background: #e47e3d url("../images/picto/Search.svg") no-repeat center center;
+    background-size: 70%; }
+
+.filtre {
+  background: #F7F7F7;
+  padding: 20px 20px 0;
+  font-size: 2rem;
+  color: #817D7D; }
+  .filtre a {
+    color: #4E4E4E;
+    font-size: 2rem; }
+  .filtre label {
+    cursor: pointer; }
+  .filtre #menu-toggle {
+    display: none;
+    /* hide the checkbox */ }
+  .filtre #menu {
+    display: none; }
+  .filtre #menu-toggle:checked + #menu {
+    display: block; }
+
+.capital_gain_traveler {
+  background-color: #ECA477;
+  padding: 35px 10px 20px; }
+  .capital_gain_traveler ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+  .capital_gain_traveler li {
+    color: white;
+    font-size: 1.2rem;
+    padding: 30px 10px 15px;
+    background: url("../images/picto/kezako_explorez.svg") no-repeat center top;
+    background-size: contain; }
+  .capital_gain_traveler #kezako_discutez {
+    background-image: url("../images/picto/kezako_discutez.svg"); }
+  .capital_gain_traveler #kezako_voyagez {
+    background-image: url("../images/picto/kezako_voyagez.svg"); }
+
+.travels {
+  background: #F7F7F7;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+
+.travel {
+  border-bottom: 1px solid #4E4E4E;
+  border-top: 1px solid #4E4E4E;
+  margin: 50px 0 20px;
+  padding: 5px 0;
+  font-family: "Futura", "Arial", sans-serif; }
+
+.travel_top {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: justify-content;
+  align-items: center;
+  font-size: 0.875rem; }
+  .travel_top p {
+    margin: 0;
+    text-transform: none;
+    color: #817D7D; }
+  .travel_top a {
+    color: #4E4E4E; }
+  .travel_top a img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 5px; }
+
+.travel_bottom {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px 5px 0 50px; }
+  .travel_bottom h3 {
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin: 0; }
+
+.date {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  .date a {
+    color: #4E4E4E; }
+
+.interested a {
+  font-size: 1rem;
+  color: #e47e3d; }
+
+.interested a::before {
+  display: inline-block;
+  content: "";
+  background: url("../images/picto/heart_FM.png");
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  margin-left: 15px;
+  margin-right: 5px; }
+
+.traveler a {
+  font-size: 1rem;
+  color: #b24c5a; }
+
+.traveler a::before {
+  display: inline-block;
+  content: "";
+  background: url("../images/picto/Hand_V_FM.png");
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  margin-left: 15px;
+  margin-right: 5px; }
+
+.date a:nth-of-type(1)::before {
+  display: inline-block;
+  content: "";
+  background: url("../images/picto/Calendar.png");
+  background-size: contain;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px; }
+
+.date a:nth-of-type(2)::before {
+  display: inline-block;
+  content: "";
+  background: url("../images/picto/Timing.png");
+  background-size: contain;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px; }
+
+.price p {
+  font-size: 1.2rem;
+  color: #b24c5a;
+  font-weight: bold;
+  margin: 0; }
+
+/* Pagination links */
+.pagination {
+  margin: 0 100px; }
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s; }
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: #e47e3d;
+  color: white; }
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {
+  background-color: #ddd; }
+
+.trust {
+  padding: 30px;
+  background: #ffffff; }
+  .trust h2 {
+    color: #b24c5a;
+    font-size: 1.5rem;
+    text-align: center; }
+  .trust img {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px; }
+  .trust ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+  .trust p {
+    margin-top: 20px; }
+
+footer {
+  background: #b24c5a;
+  padding: 50px 20px 70px; }
+
+.footer_contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; }
+  .footer_contact img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px; }
+  .footer_contact a,
+  .footer_contact p {
+    color: white;
+    font-size: 1rem;
+    margin: 0;
+    font-family: "Arial", sans-serif; }
+
+.a_propos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px; }
+  .a_propos .top_propos {
+    margin-bottom: 20px; }
+  .a_propos a,
+  .a_propos p {
+    color: white;
+    font-size: 1rem;
+    margin: 0; }
+
+.follow ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  .follow ul li {
+    margin: 20px;
+    width: 80px;
+    height: 80px; }
+
+.follow h4 {
+  text-align: center;
+  color: white; }
+
+@media only screen and (min-width: 768px) {
+  .header_absolute {
+    height: 484px; }
+
+  .logo img {
+    height: 100px;
+    width: 100px; }
+
+  .header_top h2 {
+    font-size: 3.57rem;
+    margin-top: 160px;
+    padding-right: 20px; }
+
+  .log img {
+    height: 60px;
+    width: 60px;
+    margin-top: 25px; }
+
+  .formulaire {
+    margin: auto auto -25px; }
+    .formulaire .champ {
+      width: 351px;
+      height: 50px; }
+    .formulaire .search_btn {
+      width: 50px;
+      height: 50px; }
+
+  .nav_bottom {
+    padding: 5px 90px; }
+
+  .capital_gain_traveler {
+    height: 100%;
+    padding: 60px 120px; }
+
+  #kezako_explorez {
+    background: url("../images/picto/kezako_explorez.svg") no-repeat;
+    width: 90px;
+    height: 90px;
+    top: 0; }
+
+  #kezako_discutez {
+    background: url("../images/picto/kezako_discutez.svg") no-repeat;
+    width: 90px;
+    height: 90px;
+    top: 0; }
+
+  #kezako_voyagez {
+    background: url("../images/picto/kezako_voyagez.svg") no-repeat;
+    width: 90px;
+    height: 90px;
+    top: 0; }
+
+  .capital_gain_traveler li {
+    padding: 70px 0 15px;
+    font-size: 1.4rem; }
+
+  .filtre a {
+    padding-left: 250px; }
+
+  .travel {
+    border: 1px solid #4E4E4E;
+    margin-left: 10px;
+    margin-right: 10px; }
+    .travel p {
+      font-size: 1.2rem; }
+
+  .travel_top a img {
+    width: 50px;
+    height: 50px; }
+
+  .travel_bottom h3 {
+    font-size: 1.5rem; }
+
+  .travel_bottom a {
+    font-size: 1.2rem; }
+
+  .travel_bottom p {
+    font-size: 1.8rem;
+    padding-left: 60px; }
+
+  .trust ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    .trust ul li {
+      max-width: 150px; }
+
+  footer section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center; }
+    footer section article {
+      max-width: 285px; } }
+@media only screen and (min-width: 960px) {
+  .header_absolute {
+    height: 683px; }
+
+  .logo img {
+    height: 120px;
+    width: 120px; }
+
+  .nav_top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(228, 126, 61, 0.5);
+    border-radius: 20px;
+    margin-top: 20px;
+    height: 40px;
+    top: 0; }
+    .nav_top li a {
+      font-size: 1.42rem;
+      padding: 0 30px;
+      text-transform: none;
+      text-decoration: none;
+      color: #4b2f48; }
+    .nav_top li a:hover, .nav_top li a:active {
+      color: #b24c5a;
+      transition: 0.5s; }
+
+  .log img {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    margin: 0; }
+
+  .header_top h2 {
+    position: absolute;
+    margin: 230px 0 0 20px;
+    font-size: 4rem; }
+
+  .nav_top ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    .nav_top ul li {
+      font-size: 1.5rem;
+      text-transform: none; }
+
+  .nav_bottom {
+    display: none; }
+
+  .formulaire {
+    margin: auto auto -35px; }
+    .formulaire .champ {
+      width: 490px;
+      height: 70px;
+      font-size: 1.42rem; }
+    .formulaire .search_btn {
+      width: 70px;
+      height: 70px; }
+
+  .capital_gain_traveler {
+    height: 100%;
+    padding: 135px 280px; }
+
+  #kezako_explorez {
+    background: url("../images/picto/kezako_explorez.svg") no-repeat;
+    width: 135px;
+    height: 135px; }
+
+  #kezako_discutez {
+    background: url("../images/picto/kezako_discutez.svg") no-repeat;
+    width: 135px;
+    height: 135px; }
+
+  #kezako_voyagez {
+    background: url("../images/picto/kezako_voyagez.svg") no-repeat;
+    width: 135px;
+    height: 135px; }
+
+  .capital_gain_traveler li {
+    padding: 110px 0 15px;
+    font-size: 2.5rem; }
+
+  .filtre {
+    padding: 50px 210px 0; }
+    .filtre a {
+      padding-left: 250px; }
+
+  .travels {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 20px 180px; }
+
+  .travel {
+    margin: 25px;
+    width: 470px; }
+
+  .travel_img {
+    display: block;
+    width: 100%; }
+
+  .trust {
+    padding: 50px 180px; }
+    .trust img {
+      height: 150px;
+      width: 150px; }
+
+  footer {
+    padding: 50px 200px 70px; } }
+
+/*# sourceMappingURL=styles.css.map */

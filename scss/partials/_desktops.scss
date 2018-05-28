@@ -1,0 +1,194 @@
+//
+// Header
+//
+// bg
+//
+
+.header_absolute {
+  height: 683px;
+}
+// logo
+
+.logo img {
+  height: 120px;
+  width: 120px;
+}
+//
+// nav top
+//
+
+.nav_top {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  // right: 175px;
+  // padding-right: 140px;
+  // background: $orange;
+  background: rgba(228 ,126 ,61 ,0.5);
+  border-radius: 20px;
+  margin-top: 20px;
+  height: 40px;
+  top: 0;
+
+  li a {
+    font-size: 1.42rem;
+    padding: 0 30px;
+    text-transform: none;
+    text-decoration: none;
+    color: $dark_pink;
+  }
+
+  li a:hover, li a:active {
+    color: $pink;
+    transition: 0.5s;
+
+  }
+}
+//
+// avatar
+//
+
+
+.log img {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  margin: 0;
+}
+//
+// baseline
+//
+
+.header_top h2 {
+  position: absolute;
+  margin: 230px 0 0 20px;
+  font-size: 4rem;
+}
+//
+// nav bottom
+//
+
+.nav_top ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  li {
+    font-size: 1.5rem;
+    text-transform: none;
+  }
+}
+
+.nav_bottom {
+  display: none;
+}
+//
+// search
+//
+
+.formulaire {
+  margin: auto auto -35px;
+
+  .champ {
+    width: 490px;
+    height: 70px;
+    font-size: 1.42rem;
+  }
+
+  .search_btn {
+    width: 70px;
+    height: 70px;
+  }
+}
+//
+// Capital gain
+//
+
+.capital_gain_traveler {
+  height: 100%;
+  padding: 135px 280px;
+}
+
+// Explorez
+
+#kezako_explorez {
+  background: url("../images/picto/kezako_explorez.svg") no-repeat;
+  width: 135px;
+  height: 135px;
+
+}
+// Discutez
+
+#kezako_discutez {
+  background: url("../images/picto/kezako_discutez.svg") no-repeat;
+  width: 135px;
+  height: 135px;
+
+}
+// Voyagez
+
+#kezako_voyagez {
+  background: url("../images/picto/kezako_voyagez.svg") no-repeat;
+  // background-size: contain;
+  width: 135px;
+  height: 135px;
+
+}
+.capital_gain_traveler li{
+padding: 110px 0 15px;
+font-size: 2.5rem;
+}
+
+//
+// filtre
+//
+.filtre{
+  padding: 50px 210px 0;
+  a{
+    padding-left: 250px;
+  }
+}
+
+
+//
+// travels
+//
+
+.travels {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 20px 180px;
+}
+
+.travel {
+  margin: 25px;
+  width: 470px;
+}
+
+.travel_img {
+  display: block;
+  width: 100%;
+}
+
+//
+// trust
+//
+
+.trust{
+  padding: 50px 180px;
+
+  img{
+    height: 150px;
+    width: 150px;
+  }
+}
+
+//
+// footer
+//
+
+footer{
+  padding: 50px 200px 70px;
+}

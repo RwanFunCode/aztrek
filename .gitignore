@@ -1,0 +1,6 @@
+.idea/
+/nbproject/
+*.bak
+conig/parameters.php
+uploads/*
+admin/node_modules/
