@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 /**
  * Debugger une variable
@@ -13,6 +14,13 @@ function debug($var, bool $die= true){
     if ($die){
         die;
     }
+}
+
+function getCurrentUser() {
+    if (isset($_SESSION["id"])) {
+        return getOneUser($_SESSION["id"]);
+    }
+    return null;
 }
 
 

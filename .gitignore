@@ -4,3 +4,4 @@
 conig/parameters.php
 uploads/*
 admin/node_modules/
+.sass-cach/*

@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../lib/functions.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 

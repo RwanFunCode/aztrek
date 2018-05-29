@@ -4,7 +4,8 @@ function getAllProjects(int $limit = 999) {
     /* @var $connection PDO */
     global $connection;
 
-    $query = "SELECT 	firstname,
+    $query = "SELECT 	travel.id,
+                        firstname,
                         avatar,
                         picture_princ,
                         title_travel AS title,
