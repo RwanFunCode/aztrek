@@ -31,3 +31,12 @@ function getMenuTop(){
 function getMenu(){
     require_once 'layout/menu_mobil.php'; 
 }
+
+function getCapitalGain(){
+    require_once 'layout/capital_gain.php'; 
+}
+
+function getTrust(){
+    require_once 'layout/trust.php'; 
+}
+

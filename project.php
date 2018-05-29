@@ -13,36 +13,46 @@ $project = getOneProject($id);
 $list_members = getAllMembersByProject($id);
 $list_pictures = getAllPicturesByProject($id);
 
+ 
 
 getHeader($project["title"]);
 ?>
 
-<section class="container">
-    
-    <h1><?php echo $project["title"]; ?></h1>
-    <p>Date de début du projet : <?php echo $project["date_start_format"]; ?></p>
-    <p>
-        <?php if (is_numeric($project["days"])) : ?>
-            Ce projet a duré <?php echo $project["days"]; ?> jours.
-        <?php else: ?>
-            Ce projet est en cours de réalisation.
-        <?php endif; ?>
-    </p>
-    <img src="uploads/<?php echo $project["picture"]; ?>" alt="">
-    <p><?php echo $project["description"]; ?></p>
+   <section class="travels ">
+      <!-- Les voyages -->
 
-    <h2>Membres ayant participés au projet</h2>
-    <?php foreach ($list_members as $member) : ?>
-        <article>
-            <h3><?php echo $member["fullname"]; ?></h3>
-            <img src="uploads/<?php echo $member["picture"]; ?>" alt="">
+      <!-- Voyage 01 -->
+      <section class="travel travel_01">
+        <!-- Navigation top travel il est possible de cliquer sur l'avatar ainsi que sur le nom du guide afin d'aller sur sa fiche -->
+        <article class="travel_top">
+          <a href="#"><img src="./images/photo/Avatar_connected.jpg" alt="avatar connected"></a>
+          <div>
+            <p>Partez avec <a href="#"><strong>Lucie</strong></a></p>
+            <p>Au <a href="#"><strong>Salvador</strong></a></p>
+          </div>
         </article>
-    <?php endforeach; ?>
-    
-    <h2>Photos</h2>
-    <?php foreach ($list_pictures as $picture) : ?>
-    <img src="uploads/<?php echo $picture["filename"]; ?>" alt="">
-    <?php endforeach; ?>
-</section>
+        <div class="travel_img">
+          <a href="#"><img src="./images/photo/Voyage_image-02.jpg" alt=""></a>
+        </div>
+        <article class="travel_bottom">
+          <div class="interested">
+            <h3>Intéressés</h3>
+            <a href="#">25</a>
+          </div>
+          <div class="traveler">
+            <h3>Participants</h3>
+            <a href="#">8</a>
+          </div>
+          <div class="date">
+            <a href="#">5 juillet</a>
+            <a href="#">11 nuits</a>
+          </div>
+          <div class="price">
+            <p>1 525 €</p>
+          </div>
+
+
+        </article>
+      </section>
 
 <?php getFooter(); ?>

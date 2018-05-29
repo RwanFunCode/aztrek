@@ -8,7 +8,10 @@
         </ul>
         <!-- Connection avatar -->
         <div class="log">
-          <a href="#"><img src="./images/photo/Avatar_connected@2x.jpg" alt="avatar connected"></a>
+            <a href="#"><img src="./images/photo/erwan.jpg" alt="avatar"></a>
+        <!--  <?php foreach ($list_projects as $project): ?>
+                        <a href="#"><img src="./images/photo/<?php echo $project["avatar"]; ?>" alt="<?php echo $project["firstname"]; ?>"></a>
+                        <?php endforeach; ?> -->
         </div>
 
       </nav><?php

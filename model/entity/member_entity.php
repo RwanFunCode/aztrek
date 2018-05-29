@@ -34,19 +34,35 @@ function getAllMembersByProject(int $id) {
 }
 
 
-function insertMember(string $firstname, string $lastname, string $picture) {
+function insertUser(string $email, string $password ,string $picture) {
     /* @var $connection PDO */
     global $connection;
 
-    $query = "INSERT INTO member (firstname, lastname, picture)
-            VALUES(:firstname, :lastname, :picture);";
+    $query = "INSERT INTO member (email, password, picture)
+            VALUES(:email, :password, :picture);";
 
   $stmt = $connection->prepare($query);
-    $stmt->bindParam(":firstname", $firstname);
-    $stmt->bindParam(":lastname", $lastname);
+    $stmt->bindParam(":email", $email);
+    $stmt->bindParam(":password", $password);
     $stmt->bindParam(":picture", $picture);
     $stmt->execute();
+    
+    $user_id = $connection->lastInsertId();
+    insertUserRole($user_id, 1);
 }
+
+function insertUserRole(int $user_id, int $role_id) {
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "INSERT INTO member (label)
+            VALUES(:label);";
+
+  $stmt = $connection->prepare($query);
+    $stmt->bindParam(":label", $label);
+    $stmt->execute();
+}
+
 function updateMember(int $id, string $firstname, string $lastname, string $picture) {
     /* @var $connection PDO */
     global $connection;
