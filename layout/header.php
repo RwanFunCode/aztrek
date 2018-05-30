@@ -41,7 +41,7 @@
 
     <!-- Barre de recherche -->
     <form class="formulaire" action="index.html" method="post">
-      <input class="champ" type="text" name="" value="Ou voulez vous partir">
+      <input class="champ" type="text" name="" placeholder="Ou voulez vous partir">
       <input class="search_btn" type="button" name="" value="">
     </form>
 
