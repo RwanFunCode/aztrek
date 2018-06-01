@@ -1,0 +1,25 @@
+{
+  "name": "aztrek",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RwanFunCode/aztrek.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RwanFunCode/aztrek/issues"
+  },
+  "homepage": "https://github.com/RwanFunCode/aztrek#readme",
+  "dependencies": {
+    "select2": "^4.0.6-rc.1"
+  }
+}

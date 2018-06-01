@@ -1,8 +1,8 @@
 <?php
-require_once '../model/database.php';
+require_once '../../../model/database.php';
 
 $id = $_GET["id"];
-$member = getOneEntity("member", $id);
+$travel = getOneEntity("travel", $id);
 
 require_once '../../layout/header.php';
 ?>
@@ -17,26 +17,6 @@ require_once '../../layout/header.php';
     <div class="form-group">
         <label for="firstname">Prénom</label>
         <input type="text" id="firstname" name="firstname" value="<?php echo $member["firstname"]; ?> "class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="firstname">Sexe</label>
-        <input type="text" id="firstname" name="Sexe" value="<?php echo $member["Sexe"]; ?> "class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="firstname">Email</label>
-        <input type="text" id="firstname" name="Email" value="<?php echo $member["Email"]; ?> "class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="address">zip</label>
-        <input type="text" id="firstname" name="address" value="<?php echo $member["address"]; ?> "class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="zip">zip</label>
-        <input type="text" id="firstname" name="zip" value="<?php echo $member["zip"]; ?> "class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="country">zip</label>
-        <input type="text" id="firstname" name="country" value="<?php echo $member["country"]; ?> "class="form-control">
     </div>
     <div class="form-group">
         <label for="picture">Photo</label>

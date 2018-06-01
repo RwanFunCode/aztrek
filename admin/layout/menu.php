@@ -1,20 +1,21 @@
 <ul class="nav flex-column">
     <li class="nav-item">
         <a class="nav-link <?php echo (CURRENT_URL == ADMIN_URL) ? "active" : ""; ?> " href="<?php echo ADMIN_URL; ?>">
-            <i class="fa fa-home"></i>            
-            Tableau de bord
+            <i class="fa fa-home"></i>       
+            Mon compte
         </a>
     </li>
      <li class="nav-item">
-        <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/members/">
+        <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/voyages/">
             <i class="fa fa-users"></i>         
-            Membres
+            Les voyages
         </a>
     </li>
    <li class="nav-item">
-        <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/projects/">
+        <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/pays/">
             <i class="fa fa-briefcase"></i>
-            Projets
+            pays
+            
         </a>
     </li>
 </ul>

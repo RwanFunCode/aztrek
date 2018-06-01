@@ -16,11 +16,12 @@ function getAllProjects(int $limit = 999) {
                         description,
                         interested,
                         country.name AS country,
-			DATE_FORMAT(date_depart, '%d %M') AS depart
+			DATE_FORMAT(MIN(date_depart), '%d %M') AS depart
     FROM travel
     INNER JOIN country ON travel.country_id = country.id 
     INNER JOIN user ON user.id = travel.user_id
-    INNER JOIN depart ON depart.travel_id = travel.id ;
+    LEFT JOIN depart ON depart.travel_id = travel.id
+    GROUP BY travel.id;
     ";
 
     $stmt = $connection->prepare($query);

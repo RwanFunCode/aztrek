@@ -8,45 +8,34 @@ if (!isset($_GET["id"]) || !is_numeric($_GET["id"])) {
 }
 
 $id = $_GET["id"];
-
-$project = getOneProject($id);
-
-
 $guide = getGuideUser($id);
-
-// $list_pictures = getAllPicturesByProject($id);
-
- 
-
-getHeader($project["title"]);
+$pays = getOneEntity("country", $id);
+// Récupérer la liste des séjours d'un pays
+$travel_pays = getTravelPays($id);
+$project = getOneProject($id);
+getHeader($pays["name"]);
 ?>
 
-<section>
-    <article class="guide">
-        <a href="guide.php"><img src="images/photo/<?php echo $guide["avatar"]; ?>" alt="<?php echo $guide["firstname"]; ?>"></a>
-                        <a href="guide.php">
-                        <h2>Guide : <?php echo  $guide["firstname"]; ?></h2>
-                        </a>
-                        <h3>Pays : <?php echo  $project["country"]; ?></h3>
-                                             
-    </article>
-</section>
+<h2><?php echo $pays["name"] ?></h2>
+
+<!-- foreach pour afficher la liste des séjours du pays -->
+ <?php foreach ($travel_pays as $travel): ?>
+        </section>
           <section class="">
         <!-- Navigation top travel il est possible de cliquer sur l'avatar ainsi que sur le nom du guide afin d'aller sur sa fiche -->
         <article class="travel_top">
           
             <div>
               <p>Partez avec <a href="#"><strong><?php echo $guide["firstname"]; ?></strong></a></p>
-            <p>Au <a href="#"><strong> <?php echo $project["country"]; ?></strong></a></p>
           </div>
         </article>
         <div class="travel_img">
-            <a href="project.php?id=<?php echo $project["id"]; ?>"><img src="images/photo/<?php echo $project["picture_princ"]; ?>" alt="<?php echo $project["title"]; ?>"></a>
+            <a href="project.php?id=<?php echo $travel["id"]; ?>"><img src="images/photo/<?php echo $travel["picture_princ"]; ?>" alt="<?php echo $project["title"]; ?>"></a>
         </div>
         <article class="travel_bottom">
           <div class="interested">
             <h3>Intéressés</h3>
-            <a href="#"><?php echo $project["interested"] ?></a>
+            <a href="#"><?php echo $travel["interested"] ?></a>
           </div>
           <div class="traveler">
             <h3>Participants</h3>
@@ -54,18 +43,15 @@ getHeader($project["title"]);
           </div>
           <div class="date">
               <a href="#"><?php echo $project["depart"] ?></a>
-            <a href="#"><?php echo $project["nbr_place"] ?>Places</a>
+            <a href="#"><?php echo $travel["nbr_place"] ?>Places</a>
           </div>
           <div class="price">
-              <p><?php echo $project["price"];  ?> €</p>
+              <p><?php echo $travel["price"];  ?> €</p>
           </div>
             
-            <p><?php echo $project["description"]; ?></p>
+            <p><?php echo $travel["description"]; ?></p>
         </article>
       </section>
-
-
-
-
+    <?php endforeach; ?>
 
 <?php getFooter(); ?>
